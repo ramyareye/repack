@@ -1,6 +1,8 @@
 {
   "private": true,
-  "workspaces": ["./packages/*"],
+  "workspaces": [
+    "./packages/*"
+  ],
   "scripts": {
     "prepare": "yarn workspaces run prepare",
     "build": "yarn workspaces run build",
@@ -8,6 +10,8 @@
     "tsc": "yarn workspaces run tsc",
     "test": "yarn workspaces run test",
     "release": "yarn prepare && cp README.md packages/repack && yarn workspace @callstack/repack run release",
+    "cra:start": "yarn workspace cra run start",
+    "cra:build": "yarn workspace cra run build",
     "example:start": "yarn workspace TesterApp run start",
     "example:build": "yarn workspace TesterApp run build"
   }
